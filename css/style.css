@@ -1,0 +1,29 @@
+
+.nav__item {
+  position: relative;
+  width:120px;
+  text-align: left;
+}
+
+.nav__item-link {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #8B8E93;
+  display: block;
+  border-bottom: 1px solid #F0F0F0;
+}
+.nav__item-link:hover {
+  background: #f0f0f0;
+  width: 100%;
+}
+.nav__item-link.is-active .nav__item-icon {
+  color: #fff;
+}
+.nav__item:last-child .nav__item-link {
+  border-bottom: none;
+}
+.nav__item-icon {
+  color: #D2D5DA;
+  font-size: 18px;
+  margin-right: 10px;
+}

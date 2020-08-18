@@ -1,0 +1,75 @@
+
+.all{
+    position: relative;
+    top:40px;
+    border:0;
+    border-collapse: collapse;
+    width:750px;
+    height:1500px;
+    border-radius:15px;
+    overflow-y:auto;
+}
+.list{
+    position: relative;
+    top:40px;
+    border:0;
+    border-collapse: collapse;
+    width:750px;
+    height:1100px;
+    background:white;
+    border-radius:15px;
+    overflow-y:auto;
+    opacity: 0.6;
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 25px;
+    height: 40px;
+    width: auto;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: rgba(18, 149, 255, 0.44);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px #ffbc00;
+}
+
+.button:hover {
+    background-color: #2694cb
+}
+
+table th{
+    font-size:30px;
+
+}
+table tr td{
+    font-size:30px;
+    width: 180px;
+    height: auto;
+    white-space : nowrap;
+}
+
+
+.showDate{
+    padding :0;
+    margin:0;
+    display: inline-block;
+    float: left;
+}
+.showDate ul{
+    padding :0;
+    margin:0;
+    display: inline-block;
+}
+.showDate li {
+    float: left;
+    display: block;
+    padding: 0px 10px 0px 10px;
+    text-decoration: none;
+    margin: 0px;
+}

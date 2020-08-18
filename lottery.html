@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>抽奖</title>
+    <link href="./css/lottery.css" rel="stylesheet" type="text/css">
+    <script language="javascript" type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <div id="web_bg" style="background-image: url(./img/lottery/bg3.jpg)"></div>
+</div>
+<center>
+    <div class="user">
+        <ul>
+            <!--头像图片-->
+            <li><p class="touxiang"><img src="img\lottery\user.jpg" alt="头像" width="90px"
+                        height="90px"/></p></li>
+            <li><h>嗨，Lichuwen，您的积分为:<span id="bonus">50</span>分</h></li>
+        </ul>
+    </div>
+
+    <div class="info">
+        <div class="clsTitle" id="clsTitle"><img src="img\lottery\info1.png" width="100%" height="100%"/></div>
+        <div class="clsContent" id="clsContent">&nbsp;&nbsp;每次抽奖均要消费10积分，获得的奖品需到抽奖列表点击兑换，随后即可拿兑换码向财务部领取奖品</div>
+    </div>
+
+    <div class="info2">
+        <div class="clsTitle" id="clsTitle2"><img src="img\lottery\info2.png" width="100%" height="100%"/></div>
+        <div class="clsContent" id="clsContent2">
+            <p>文章登上热门可获得5分</p>
+            <p>发表原创文章可获得3分</p>
+            <p>评论他人文章可获得1分</p>
+        </div>
+    </div>
+    <div class="info3" >
+        <a href="section.html" ><img src="img\lottery\return.png" width="100%" height="100%"/></a>
+    </div>
+    <div class="info4" >
+        <a href="list.html" ><img src="img\lottery\info3.png" width="100%" height="100%"/></a>
+    </div>
+
+    <!--转盘-->
+    <div class="turntable">
+        <table cellspacing="8" cellpadding="0" >
+            <tr>
+                <td  colspan="2" rowspan="2" >
+                    <center>
+                        <img src="img\lottery\1.jpg" width="55%" height="55%"/>
+                        <br>
+                        <h2 id="1" style="display:none;">话费直充50元</h2>
+                    </center>
+                </td>
+
+                <td  >
+                    <center>
+                        <img src="img\lottery\2.png" width="35%" height="35%"/>
+                        <br>
+                        <h2 id="2">优酷会员1个月</h2>
+                    </center>
+                </td>
+
+                <td >
+                    <center>
+                        <img src="img\lottery\3.png" width="35%" height="35%"/>
+                        <br>
+                        <h2 id="3">免单券1张</h2>
+                    </center>
+                </td>
+            </tr>
+
+            <tr>
+                <td >
+                    <center>
+                        <img src="img\lottery\4.png" width="35%" height="35%"/>
+                        <br>
+                        <h2 id="4">红包5元</h2>
+                    </center>
+                </td>
+
+                <td >
+                    <center>
+                        <img src="img\lottery\5.png" width="40%" height="40%"/>
+                        <br>
+                        <h2 id="5" >积分2分</h2>
+                    </center>
+                </td>
+            </tr>
+
+            <tr>
+
+                <td >
+                    <center>
+                        <img src="img\lottery\6.png" width="35%" height="35%"/>
+                        <br>
+                        <h2 id="6" >爱奇艺会员1个月</h2>
+                    </center>
+                </td>
+
+                <td >
+                    <center>
+                        <img src="img\lottery\7.png" width="40%" height="40%"/>
+                        <br>
+                        <h2 id="7" >积分5分</h2>
+                    </center>
+                </td>
+                <td >
+                    <center>
+                        <img src="img\lottery\8.png" width="35%" height="35%"/>
+                        <br>
+                        <h2 id="8">午餐6折券</h2>
+                    </center>
+                </td>
+
+                <td >
+                    <center>
+                        <img src="img\lottery\9.png" width="35%" height="35%"/>
+                        <br>
+                        <h2 id="9">红包15元</h2>
+                    </center>
+                </td>
+            </tr>
+
+            <tr>
+                <td >
+                    <center>
+                        <img src="img\lottery\10.png" width="40%" height="40%"/>
+                        <br>
+                        <h2 id="10">积分1分</h2>
+                    </center>
+                </td>
+
+                <td >
+                    <center>
+                        <img src="img\lottery\11.png" width="35%" height="35%"/>
+                        <br>
+                        <h2 id="11">红包10元</h2>
+                    </center>
+                </td>
+                <td  colspan="2" rowspan="1";>
+                    <center>
+                        <B><h2 style="font-size:40px;color:darkorange">谢谢参与</h2></B>
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="buttonPlace">
+            <Br><br>
+            <img src="img\lottery\箭头.png" alt="箭头">
+            <Br><Br>
+            <button id="btn"><img src="img\lottery\button.png" style="cursor:hand" ></button>
+    </div>
+
+
+    <script type="text/javascript">
+        var lotteryCount = document.getElementById("bonus").innerHTML;
+        var btn=document.getElementById("btn");
+        btn.onclick=function() {
+            $("#btn").attr("disabled",true);
+            if (lotteryCount > 0){
+                var arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];//按这个下标依次旋转
+                var lis = document.getElementsByTagName("td");
+                console.log(lis);
+                var num = 0;  //定义初识下标
+                var T = 120;//循环时间
+                var indexRecord;
+                parseInt(Math.random()*10,10)+1;
+                Math.floor(Math.random()*10)+1;
+                var awardId =  Math.ceil(Math.random()*10)+1;
+                var award = $('h2').eq(awardId-1).text();
+
+                if (T != 0) {
+                    num = 0;
+                    time = setInterval(function () {//使用定时器重复执行
+                        lis[arr[num]].className = "";
+                        num++;
+                        if (num > 11) {
+                            num = 0;
+                            T -= 60;
+                        }
+                        lis[arr[num]].className = "light";
+                        if (T == 0) {
+                            for(var j=0;j<12; j++){
+                                if(($('h2').eq(j).text()) == award){
+                                    indexRecord = j;
+                                    break;
+                                }
+                            }
+                        }
+                        if (T == 0 && num == indexRecord) {
+                            clearInterval(time);//清除已设置的setInterval对象
+                            alert("恭喜您，抽中：" + ($('h2').eq(indexRecord-1).text()));
+                            lis[arr[num]].className = "";
+                            $("#btn").attr("disabled",false);
+                        }
+                    }, 60)
+                }
+            }
+            else{
+                alert("您的积分已用完，快去学习吧。");
+                $("#btn").attr("disabled",false);
+            }
+            if (lotteryCount > 0) {
+                lotteryCount -= 10;
+                document.getElementById("bonus").innerHTML = lotteryCount;
+            }
+        }
+
+    </script>
+
+    <script type="text/javascript">
+        $(function() {
+            $("#clsTitle").hover(function() {
+                $("#clsContent").show();
+            }, function() {
+                $("#clsContent").hide();
+            })
+            $("#clsTitle2").hover(function() {
+                $("#clsContent2").show();
+            }, function() {
+                $("#clsContent2").hide();
+            })
+        })
+    </script>
+
+</center>
+</body>
+</html>

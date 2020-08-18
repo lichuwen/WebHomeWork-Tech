@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>section</title>
+    <meta charset="UTF-8">
+    <link href="./css/section.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./css/iconfont.css">
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script src="./js/iconfont.js"></script>
+</head>
+
+<body style="background-color: #eeeeee">
+<div class="header-con" >
+            <div class="header-left" >
+                <ul>
+                    <li style="margin-left: 10px">TECH CLUB</li>
+                    <li style="margin-left: 23px;">
+                       <div title="版块" ><a href="#"><i class="section iconfont icon-fenleiorguangchangorqitatianchong "></i></a></div>
+                     </li>
+                    <li>
+                        <div title="未读" ><a href="unread.html"><i class="unread iconfont icon-xinfengtianchong"> </i></a></div>
+
+                    </li>
+                    <li>
+                        <div title="热门"> <a href="hot.html"><i class="hot iconfont icon-remen "></i></a></div>
+
+                    </li>
+
+                    <li>
+                        <div title="用户" > <a href="user.html"><i class="user iconfont icon-yonghutianchong "></i></a></div>
+
+                    </li>
+                    <li>
+                        <div title="抽奖" > <a href="lottery.html"><i class="lottery iconfont icon-bhjaward"></i></a></div>
+
+                    </li>
+                    <li>
+                        <div title="获奖" > <a href="list.html"><i class="list iconfont icon-lipintianchong"></i></a></div>
+                    </li>
+                </ul>
+            </div>
+    <div class="header-right" >
+        <div style="position:absolute;right:150px; top:25px"><a href="hot.html"><i class="iconfont icon-sousuotianchong"></i></a></div>
+        <ul class="t1 fl">
+            <li>
+                <a><img src="img\lottery\user.jpg" alt="头像" width="50px" height="50px" class="touxiang"/></a>
+                <ul class="t2" style="position:absolute;">
+
+                    <li class="nav__item" style="border-bottom:1px solid #c2c2c2;" >
+                        <a href="#" class="nav__item-link" id="father">
+                            <img src="img\daohang\on.png" width="18px" height="18px" id="status"/>
+                            <span class="nav__item-text">李楚雯</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__item-link" id="on" onclick="changeSta(this);return false">
+                            <img src="img\daohang\on.png" width="18px" height="18px"/>
+                            <span class="nav__item-text">在线</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__item-link" id="left" onclick="changeSta(this);return false">
+                            <img src="img\daohang\left.png" width="18px" height="18px"/>
+                            <span class="nav__item-text">离开</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#" class="nav__item-link" id="dis" onclick="changeSta(this);return false">
+                            <img src="img\daohang\dis.png" width="18px" height="18px"/>
+                            <span class="nav__item-text">请勿打扰</span>
+                        </a>
+                    </li>
+                    <li class="nav__item" style="border-bottom:1px solid #c2c2c2" >
+                        <a href="#" class="nav__item-link" id="ste" onclick="changeSta(this);return false">
+                            <img src="img\daohang\ste.png" width="18px" height="18px"/>
+                            <span class="nav__item-text" >隐身</span>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#" class="nav__item-link">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-bianji"></use>
+                            </svg>
+                            <span class="nav__item-text">编辑资料</span>
+                        </a>
+                    </li>
+                    <li class="nav__item" style="border-bottom:1px solid #c2c2c2" >
+                        <a href="#" class="nav__item-link">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-shezhi"></use>
+                            </svg>
+                            <span class="nav__item-text">设置</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="login.html" class="nav__item-link">
+                            <svg class="icon" aria-hidden="true">
+                                <use xlink:href="#icon-tuichu"></use>
+                            </svg>
+                            <span class="nav__item-text">退出</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<div style="width: 100%; height: auto; text-align: center; margin-top: 20px;">
+
+    <div class="box">
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="hot.html">
+                    <div class="port-2" style="background-color: #fda34b">
+                        <h4>公告</h4>
+                        <p>
+                            内部活动、会议、规章制度和调整等必要的公告都在这里~
+                        </p>
+                        <div class="port-3">
+                            <div class="bottom1">
+                                <p class="touxiang"><img src="img\lottery\user.jpg" alt="头像" width="58px" height="58px"/></p>
+                            </div>
+                            <p class="content">新的奖励制度</p>
+                        </div>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="hot.html">
+                    <div class="port-2" style="background-color: #7cafc2">
+                        <h4>产品</h4>
+                        <p>
+                            互联网线、商业智能、安防产品和市场信息等等
+                        </p>
+                        <div class="port-3">
+                            <div class="bottom1">
+                                <p class="touxiang"><img src="img\lottery\user2.jpg" alt="头像" width="58px" height="58px"/></p>
+                            </div>
+                            <p class="content">外界三个高频问题的参考答案</p>
+
+                        </div>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="hot.html">
+                    <div class="port-2" style="background-color: #e6b63e">
+                        <h4>技术综合区</h4>
+                        <p>
+                            这里是讨论方法论、工程化、模式等技术思想性问题的地方
+                        </p>
+                        <div class="port-3">
+                            <div class="bottom1">
+                                <p class="touxiang"><img src="img\lottery\user3.jpg" alt="头像" width="58px" height="58px"/></p>
+                            </div>
+                            <p class="content">技术团队实力增长量表-我们技术团队变得更强大了吗</p>
+                        </div>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="hot.html">
+                    <div class="port-2" style="background-color: #85b94a">
+                        <h4>前端</h4>
+                        <p>
+                            前端组内的人员讨论分享的地方
+                        </p>
+                        <div class="port-3">
+                            <div class="bottom1">
+                                <p class="touxiang"><img src="img\lottery\4.png" alt="头像" width="58px" height="58px"/></p>
+                            </div>
+                            <p class="content">session使用注意事项</p>
+                        </div>
+                    </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="box">
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="hot.html">
+                    <div class="port-2" style="background-color: #9191d6">
+                        <h4>后台</h4>
+                        <p>
+                            后台组内的人员讨论分享的地方
+                        </p>
+                        <div class="port-3">
+                            <div class="bottom1">
+                                <p class="touxiang"><img src="img\lottery\user2.jpg" alt="头像" width="58px" height="58px"/></p>
+                            </div>
+                            <p class="content">2018-12-10_李楚雯</p>
+                        </div>
+                    </div>
+                    </a>
+                </li>
+                <li >
+                    <a href="hot.html">
+                    <div class="port-2" style="background-color: #3cb371">
+                        <h4>移动端</h4>
+                        <p>
+                            移动端组内的人员讨论分享的地方
+                        </p>
+                        <div class="port-3">
+                            <div class="bottom1">
+                                <p class="touxiang"><img src="img\lottery\bg2.jpg" alt="头像" width="58px" height="58px"/></p>
+                            </div>
+                            <p class="content">跨平台构建</p>
+                        </div>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="hot.html">
+                    <div class="port-2" style="background-color: #ba8baf">
+                        <h4>架构平台</h4>
+                        <p>
+                            架构、性能、流量、容器、应用响应等一切基础设施、平台的技术讨论与分享
+                        </p>
+                        <div class="port-3">
+                            <div class="bottom1">
+                                <p class="touxiang"><img src="img\lottery\4.png" alt="头像" width="58px" height="58px"/></p>
+                            </div>
+                            <p class="content">论坛深色主题的时候表格颜色渲染有问题</p>
+
+                        </div>
+                    </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <div class="port-2" style="background-color: #aa4642">
+                        <h4>运维</h4>
+                        <p>
+                            运维相关分享和思考
+                        </p>
+                        <div class="port-3">
+                            <div class="bottom1">
+                                <p class="touxiang"><img src="img\lottery\user.jpg" alt="头像" width="58px" height="58px"/></p>
+                            </div>
+                            <p class="content">ceph-存储规范约定</p>
+
+                        </div>
+                    </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="hot.html">
+                    <div class="port-2" style="background-color: #a16946">
+                        <h4>运营</h4>
+                        <p>
+                            运营组内的人员讨论分享的地方
+                        </p>
+                        <div class="port-3">
+                            <div class="bottom1">
+                                <p class="touxiang"><img src="img\lottery\user3.jpg" alt="头像" width="58px" height="58px"/></p>
+                            </div>
+                            <p class="content">商业智能-后端模型算法支持自定义的阈值列表</p>
+
+                        </div>
+                    </div>
+                    </a>
+                </li>
+                <li >
+                    <a href="hot.html">
+                    <div class="port-2" style="background-color: #e68a8a">
+                        <h4>市场</h4>
+                        <p>
+                            市场组内的人员讨论分享的地方
+                        </p>
+                        <div class="port-3">
+                            <div class="bottom1">
+                                <p class="touxiang"><img src="img\lottery\bg2.jpg" alt="头像" width="58px" height="58px"/></p>
+                            </div>
+                            <p class="content">互联网2.0产品内容</p>
+
+                        </div>
+
+                    </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="hot.html">
+                    <div class="port-2" style="background-color: #72afc2">
+                        <h4>综合讨论区</h4>
+                        <p>
+                            各种非技术、非产品相关的讨论都在这里~
+                        </p>
+                        <div class="port-3">
+                            <div class="bottom1">
+                                <p class="touxiang"><img src="img\lottery\user.jpg" alt="头像" width="58px" height="58px"/></p>
+                            </div>
+                            <p class="content">公司2018奇葩说开战啦~</p>
+
+                        </div>
+
+                    </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="hot.html">
+                    <div class="port-2" style="background-color: #8aa0b8">
+                        <h4>建议、申请和反馈</h4>
+                        <p>
+                            使用建议、板块申请和问题反馈等关于论坛的疑问和事务等，在这里发表~
+                        </p>
+                        <div class="port-3">
+                            <div class="bottom1">
+                                <p class="touxiang"><img src="img\lottery\user.jpg" alt="头像" width="58px" height="58px"/></p>
+                            </div>
+                            <p class="content">论坛深色主题的时候表格颜色渲染有问题</p>
+
+                        </div>
+
+                    </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    function changeSta(data) {
+        var Id = data.id;
+        //var Id = event.target.getAttribute("id");
+        console.log(Id)
+        if(Id == 'on'){
+            var newStatus = 'img\\daohang\\on.png';
+            var status = document.createElement("img");
+            status.setAttribute("src", newStatus);
+            status.setAttribute("id", "status");
+            status.setAttribute("width", "18px");
+            status.setAttribute("height", "18px");
+            var father = document.getElementById("father");
+            var firstStatus = document.getElementById("status");
+            father.replaceChild(status,firstStatus)
+            console.log(status)
+        }
+        else if(Id == 'ste'){
+            var newStatus = 'img\\daohang\\ste.png';
+            var status = document.createElement("img");
+            status.setAttribute("src", newStatus);
+            status.setAttribute("id", "status");
+            status.setAttribute("width", "18px");
+            status.setAttribute("height", "18px");
+            var father = document.getElementById("father");
+            var firstStatus = document.getElementById("status");
+            father.replaceChild(status,firstStatus)
+            console.log(status)
+        }
+        else if(Id == 'dis'){
+            var newStatus = 'img\\daohang\\dis.png';
+            var status = document.createElement("img");
+            status.setAttribute("src", newStatus);
+            status.setAttribute("id", "status");
+            status.setAttribute("width", "18px");
+            status.setAttribute("height", "18px");
+            var father = document.getElementById("father");
+            var firstStatus = document.getElementById("status");
+            father.replaceChild(status,firstStatus)
+            console.log(status)
+        }
+        else if(Id == 'left'){
+            var newStatus = 'img\\daohang\\left.png';
+            var status = document.createElement("img");
+            status.setAttribute("src", newStatus);
+            status.setAttribute("id", "status");
+            status.setAttribute("width", "18px");
+            status.setAttribute("height", "18px");
+            var father = document.getElementById("father");
+            var firstStatus = document.getElementById("status");
+            father.replaceChild(status,firstStatus)
+            console.log(status)
+        }
+
+    }
+</script>
+</body>
+</html>

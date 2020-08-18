@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获奖列表</title>
+    <link href="./css/lottery.css" rel="stylesheet" type="text/css">
+    <link href="./css/list.css" rel="stylesheet" type="text/css">
+    <script language="javascript" type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <div id="web_bg" style="background-image: url(./img/lottery/bg3.jpg)"></div>
+</div>
+<center>
+    <div class="user">
+        <ul>
+            <!--头像图片-->
+            <li><p class="touxiang"><img src="img\lottery\user.jpg" alt="头像" width="90px"
+                                         height="90px"/></p></li>
+            <li><h>嗨，Lichuwen，您的积分为:<span id="bonus">50</span>分</h></li>
+        </ul>
+    </div>
+
+    <div class="info">
+        <div class="clsTitle" id="clsTitle"><img src="img\list\info1.png" width="100%" height="100%"/></div>
+        <div class="clsContent" id="clsContent">&nbsp;&nbsp;每次抽奖均要消费10积分，获得的奖品需到抽奖列表点击兑换，随后即可拿兑换码向财务部领取奖品</div>
+    </div>
+
+    <div class="info3" >
+        <a href="section.html" ><img src="img\lottery\return.png" width="100%" height="100%"/></a>
+    </div>
+
+    <!--日期-->
+    <div class="all">
+        <div class="showDate">
+            <ul>
+                <li style="width:120px; height:50px; border-radius:15px;font-size:20px;color: #e7e9e8">请选择需要<br>查看的日期</li>
+                <li><input type="date" id="date1" /></li>
+                <li><button id="bt" class="button">确定</button></li>
+                <li><button id="bt2" class="button">查看所有</button></li>
+            </ul>
+        </div>
+
+        <!--获奖列表-->
+        <div class="list">
+            <table cellpadding="25px" id="tab">
+                <thead>
+                <th>时间</th>
+                <th>奖品</th>
+                <th>兑换码</th>
+                </thead>
+                <tbody id="tbody-result">
+                    <tr>
+                        <td>2018-11-08</td>
+                        <td>优酷会员1个月</td>
+                        <td><input type="button" class="button" value="确认兑换" id="1" onclick="btnClick(this)"/></td>
+                    </tr>
+                    <tr>
+                        <td>2018-11-08</td>
+                        <td>积分2分</td>
+                        <td><input type="button" class="button" value="确认兑换" id="2" onclick="btnClick(this)"/></td>
+                    </tr>
+                    <tr>
+                        <td>2018-12-08</td>
+                        <td>话费直冲50元</td>
+                        <td><input type="button" class="button" value="确认兑换" id="3" onclick="btnClick(this)"/></td>
+                    </tr>
+                    <tr>
+                        <td>2018-12-08</td>
+                        <td>积分1分</td>
+                        <td><input type="button" class="button" value="确认兑换" id="4" onclick="btnClick(this)"/></td>
+                    </tr>
+                    <tr>
+                        <td>2018-11-05</td>
+                        <td>积分2分</td>
+                        <td><input type="button" class="button" value="确认兑换"  id="5" onclick="btnClick(this)"/></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+    <script type="text/javascript">
+        var htmltext="";
+        var dateChoice;
+        var tab = document.getElementById("tab") ;
+        var row = tab.rows.length;
+        var cell = tab.rows.item(0).cells.length ;
+
+            function btnClick(data) {
+                var Id = data.id;
+                $('#' + Id).val(Math.random().toString(36).substr(2));
+                $('#' + Id).attr("disabled",true);
+                document.getElementById(Id).setAttribute("style",
+                        "border-radius: 5px;box-shadow: 0 0px;" +
+                        "background-color: rgba(3, 27, 47, 0.8);");
+            }
+
+        var btn1 = document.getElementById("bt");
+                btn1.onclick=function(){
+                    dateChoice = $('#date1').val();
+                    console.log($('#date1').val());
+                    for(var i=0;i<row;i++){
+                        for(var j=0;j<cell ;j++){
+                            if(dateChoice == tab.rows[i].cells[0].innerHTML) {
+                                htmltext += "<tr>" +
+                                        "<td>" + tab.rows[i].cells[0].innerHTML + "</td>"
+                                        +"<td>"+tab.rows[i].cells[1].innerHTML+"</td>"
+                                        +"<td>"+tab.rows[i].cells[2].innerHTML+"</td>" +
+                                        "</tr>";
+                                break;
+                            }
+                        }
+                    }
+                    $('#tbody-result').html(htmltext)
+                    htmltext = "";
+                }
+                document.getElementById("bt2").onclick=function (){
+                    window.location.reload();
+                }
+    </script>
+
+    <script type="text/javascript">
+        $(function() {
+            $("#clsTitle").hover(function() {
+                $("#clsContent").show();
+            }, function() {
+                $("#clsContent").hide();
+            })
+            $("#clsTitle2").hover(function() {
+                $("#clsContent2").show();
+            }, function() {
+                $("#clsContent2").hide();
+            })
+        })
+    </script>
+
+
+
+</center>
+</body>
+</html>

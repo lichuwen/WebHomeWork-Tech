@@ -1,0 +1,200 @@
+
+*{margin: 0; padding: 0; }
+
+.header-con{
+    height: 70px;
+    width: 100%;
+    background-color:white;
+    /*overflow: hidden;*/
+    /*position:absolute;*/
+    box-shadow: 0 3px rgba(188, 188, 188, 0.09);
+}
+li{
+    list-style-type: none;
+}
+.header-left ul {
+    padding: 20px;
+}
+.header-left{
+    float: left;
+    margin: 0px;
+    font-size: 20px;
+}
+.header-left li{
+    float: left;
+    margin: 5px;
+}
+
+.header-right{
+    float: right;
+    margin-top: 9px;
+}
+.header-right .touxiang{
+    width:55px;
+    height:55px;
+    border-radius:100%;
+    overflow:hidden;
+    background: #d9d3df;
+}
+.header-right ul{
+    padding: 1px;
+}
+.header-right li{
+    float: left;
+    line-height:45px;
+    margin-right:3px
+}
+.section {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+.section:hover{
+    opacity:0.5;
+}
+.unread {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+.unread:hover{
+    opacity:0.5;
+}
+.hot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+.hot:hover{
+    opacity:0.5;
+}
+.user {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+.user:hover{
+    opacity:0.5;
+}
+
+.lottery {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+.lottery:hover{
+    opacity:0.5;
+}
+
+.list {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+}
+.list:hover{
+    opacity:0.5;
+}
+
+.box{
+    width:100%;
+    height: auto;
+    margin-left: 10%;
+    float: left;
+    display:inline-block;
+}
+.container{margin: 0 auto; width: 1700px;}
+.container ul{margin: 0 -1.5%;}
+.container li{float: left; width: 18%; margin:20px 20px 20px 15px; list-style: none;}
+.port-2{float: left; width: 300px; height:300px;position: relative; overflow: hidden; text-align: center; border: 0px solid rgba(255, 210, 0, 0.9); }
+.port-2:hover{
+    opacity: 0.8;
+}
+.port-3{
+    background-color: rgba(17,17,17,.7);
+    height: 65px;
+    border: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 6px;
+}
+.bottom1{
+    float: left;
+}
+.bottom1 p{
+    margin-top: 5px;
+    margin-left: 0;
+}
+h4{
+    margin-top: 20px;
+    margin-left: 15px;
+    text-align: justify;
+    color: white;
+    font-size: 23px;
+    font-family: "Adobe Arabic";
+}
+p{
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: justify;
+    color: white;
+    font-size: 18px;
+    font-family: "Adobe Arabic";
+}
+img{
+    vertical-align: middle;
+}
+.bottom1 .touxiang{
+    width:58px;
+    height:58px;
+    border-radius:100%;
+    overflow:hidden;
+    background: #d9d3df;
+}
+.content{
+    margin-top: 0px;
+    margin-left: 55px;
+    font-size: 15px;
+    font-family: 宋体;
+}
+
+ul.t1{
+    width:240px;
+    display: inline-block;
+      /*给class="t1"的ul设置宽高*/
+}
+.fl > li{       /*选择class="fl"元素的子元素中的li,即一级菜单栏右浮动*/
+    float:right;
+}
+.t1 > li{
+    width:50%;
+}
+.t2{
+    text-align:center;
+    background: #ffffff
+}
+.t2 li{
+     display:none;  /*二级菜单栏隐藏*/
+ }
+.t1 > li:hover{
+    cursor: pointer;
+}
+.t1 >li:hover .t2 li{ /*当鼠标移动到.t1的子元素li上，.t2的子孙元素li显示*/
+    display:block;
+}
+
+
+
+
+
+
+
+
